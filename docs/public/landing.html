@@ -57,13 +57,19 @@
       padding: 0 24px;
       position: relative;
       z-index: 1;
+      overflow: visible;
     }
 
     /* Hero Section */
     .hero {
-      padding: 70px 24px 50px;
-      background: radial-gradient(circle at top, rgba(0, 204, 255, 0.18), transparent 55%),
-        linear-gradient(135deg, rgba(0, 255, 136, 0.09), rgba(5, 10, 20, 0.9));
+      padding: 40px 24px 25px;
+      background: 
+        radial-gradient(circle at top, rgba(0, 204, 255, 0.18), transparent 55%),
+        linear-gradient(135deg, rgba(0, 255, 136, 0.09), rgba(5, 10, 20, 0.9)),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><defs><style>.node { fill: rgba(0, 255, 136, 0.08); } .connection { stroke: rgba(0, 204, 255, 0.06); stroke-width: 1; fill: none; }</style></defs><circle class="node" cx="150" cy="120" r="4"/><circle class="node" cx="320" cy="80" r="3"/><circle class="node" cx="480" cy="140" r="4"/><circle class="node" cx="650" cy="100" r="3"/><circle class="node" cx="200" cy="250" r="3"/><circle class="node" cx="380" cy="280" r="4"/><circle class="node" cx="550" cy="260" r="3"/><circle class="node" cx="720" cy="300" r="4"/><circle class="node" cx="120" cy="400" r="3"/><circle class="node" cx="300" cy="420" r="4"/><circle class="node" cx="500" cy="380" r="3"/><circle class="node" cx="680" cy="450" r="4"/><line class="connection" x1="150" y1="120" x2="320" y2="80"/><line class="connection" x1="320" y1="80" x2="480" y2="140"/><line class="connection" x1="480" y1="140" x2="650" y2="100"/><line class="connection" x1="200" y1="250" x2="380" y2="280"/><line class="connection" x1="380" y1="280" x2="550" y2="260"/><line class="connection" x1="550" y1="260" x2="720" y2="300"/><line class="connection" x1="120" y1="400" x2="300" y2="420"/><line class="connection" x1="300" y1="420" x2="500" y2="380"/><line class="connection" x1="500" y1="380" x2="680" y2="450"/><line class="connection" x1="150" y1="120" x2="200" y2="250"/><line class="connection" x1="320" y1="80" x2="380" y2="280"/><line class="connection" x1="480" y1="140" x2="550" y2="260"/><line class="connection" x1="200" y1="250" x2="120" y2="400"/><line class="connection" x1="380" y1="280" x2="300" y2="420"/></svg>');
+      background-size: cover, cover, 800px 600px;
+      background-position: center, center, center;
+      background-repeat: no-repeat, no-repeat, repeat;
       border-bottom: 1px solid rgba(0, 255, 136, 0.2);
       position: relative;
       overflow: hidden;
@@ -255,14 +261,21 @@
 
     /* Section Styles */
     section {
-      padding: 70px 0;
+      padding: 40px 0;
       position: relative;
+      overflow: visible;
+    }
+    
+    /* Terminal section - appears earlier */
+    #terminal-section {
+      padding: 20px 0 40px;
+      margin-top: 3rem;
     }
 
     section::before {
       content: '';
       position: absolute;
-      inset: 0 5%;
+      inset: 20px 5%;
       border-top: 1px solid rgba(0, 204, 255, 0.08);
       border-bottom: 1px solid rgba(0, 204, 255, 0.08);
       pointer-events: none;
@@ -272,7 +285,9 @@
       text-align: center;
       font-size: 2.6rem;
       font-weight: 800;
-      margin-bottom: 1rem;
+      margin: 0.8em 0 1rem;
+      padding: 0.4em 0;
+      line-height: 1.4;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       background: linear-gradient(120deg, #00ff88 30%, #00ccff);
@@ -280,13 +295,15 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-shadow: 0 0 20px rgba(0, 255, 136, 0.35);
+      overflow: visible;
+      display: block;
     }
 
     .section-subtitle {
       text-align: center;
       font-size: 1.1rem;
       color: #93a6c7;
-      margin-bottom: 3.5rem;
+      margin-bottom: 2rem;
       letter-spacing: 0.04em;
     }
 
@@ -412,23 +429,35 @@
       font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
       font-size: 13px;
       line-height: 1.6;
-      min-height: 400px;
+      min-height: 550px;
       color: #c9d1d9;
       position: relative;
       overflow-y: visible;
       background: radial-gradient(circle at top left, rgba(0, 255, 136, 0.06), transparent 50%);
+      user-select: text;
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
     }
 
     /* CLI specific styles */
     #cli-demo {
       overflow-x: hidden;
       word-wrap: break-word;
+      user-select: text;
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
     }
 
     #cli-demo > div {
       white-space: pre-wrap;
       word-break: break-all;
       overflow-wrap: break-word;
+      user-select: text;
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
     }
 
     #cli-demo .command {
@@ -436,6 +465,10 @@
       word-break: break-all;
       overflow-wrap: break-word;
       display: inline;
+      user-select: text;
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
     }
 
     /* TUI specific styles - keep original behavior */
@@ -448,11 +481,39 @@
     }
 
     #cli-demo .command::selection {
-      background: transparent;
+      background: rgba(0, 255, 136, 0.3);
+      color: #c9d1d9;
     }
 
     #cli-demo .command::-moz-selection {
-      background: transparent;
+      background: rgba(0, 255, 136, 0.3);
+      color: #c9d1d9;
+    }
+    
+    #cli-demo .prompt::selection {
+      background: rgba(0, 255, 136, 0.3);
+      color: #00ff88;
+    }
+    
+    #cli-demo .prompt::-moz-selection {
+      background: rgba(0, 255, 136, 0.3);
+      color: #00ff88;
+    }
+    
+    /* Ensure all elements in CLI terminal are selectable */
+    #cli-demo * {
+      user-select: text !important;
+      -webkit-user-select: text !important;
+      -moz-user-select: text !important;
+      -ms-user-select: text !important;
+    }
+    
+    /* Typed.js spans should also be selectable */
+    #cli-demo span[class*="typed"] {
+      user-select: text !important;
+      -webkit-user-select: text !important;
+      -moz-user-select: text !important;
+      -ms-user-select: text !important;
     }
 
     .typed-cursor {
@@ -475,7 +536,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 400px;
+  min-height: 550px;
     }
 
     .prompt { color: #00ff88; }
@@ -511,7 +572,7 @@
       position: relative;
       width: 100%;
       height: 100%;
-      min-height: 400px;
+      min-height: 550px;
       display: block;
     }
 
@@ -801,7 +862,7 @@
 
 /* Installation - Hacker/Dev Style */
 .install-section {
-  padding: 40px 0;
+  padding: 15px 0 25px;
 }
 
 .install-wrapper {
@@ -1054,8 +1115,7 @@
       <div class="install-wrapper">
         <div class="install-dropdown">
           <select class="install-dropdown-select" id="install-method">
-            <option value="npm">npm</option>
-            <option value="homebrew">Homebrew</option>
+            <option value="npm">NPM</option>
             <option value="bash">Bash</option>
             <option value="powershell">PowerShell</option>
           </select>
@@ -1069,7 +1129,7 @@
   </section>
 
   <!-- Terminal Demos -->
-  <section>
+  <section id="terminal-section">
     <div class="container">
       <h2 class="section-title">See It In Action</h2>
       <p class="section-subtitle">Switch between CLI and TUI modes to see both interfaces in action</p>
@@ -1092,7 +1152,7 @@
             <div class="terminal-dot red"></div>
             <div class="terminal-dot yellow"></div>
             <div class="terminal-dot green"></div>
-            <div class="terminal-title">Command Line Interface</div>
+            <div class="terminal-title">Terminal</div>
           </div>
           <div class="terminal-body" id="cli-demo"></div>
         </div>
@@ -1102,7 +1162,7 @@
             <div class="terminal-dot red"></div>
             <div class="terminal-dot yellow"></div>
             <div class="terminal-dot green"></div>
-            <div class="terminal-title">Terminal User Interface</div>
+            <div class="terminal-title">Terminal</div>
           </div>
           <div class="terminal-body">
             <div class="tui-screen" id="tui-demo"></div>
@@ -1337,6 +1397,10 @@
         
         // Command 1: Add filesystem (STDIO)
         const line1 = document.createElement('div')
+        line1.style.userSelect = 'text'
+        line1.style.webkitUserSelect = 'text'
+        line1.style.mozUserSelect = 'text'
+        line1.style.msUserSelect = 'text'
         line1.innerHTML = '<span class="prompt">$ </span><span class="command" id="cmd1"></span>'
         cliDemo.appendChild(line1)
         
@@ -1348,12 +1412,20 @@
             addTimeout(() => {
               const output1 = document.createElement('div')
               output1.className = 'success'
+              output1.style.userSelect = 'text'
+              output1.style.webkitUserSelect = 'text'
+              output1.style.mozUserSelect = 'text'
+              output1.style.msUserSelect = 'text'
               output1.textContent = "✓ Added server: filesystem"
               cliDemo.appendChild(output1)
               
               addTimeout(() => {
                 // Command 2: Add asana (SSE)
                 const line2 = document.createElement('div')
+                line2.style.userSelect = 'text'
+                line2.style.webkitUserSelect = 'text'
+                line2.style.mozUserSelect = 'text'
+                line2.style.msUserSelect = 'text'
                 line2.innerHTML = '<span class="prompt">$ </span><span class="command" id="cmd2"></span>'
                 cliDemo.appendChild(line2)
                 
@@ -1365,12 +1437,20 @@
                     addTimeout(() => {
                       const output2 = document.createElement('div')
                       output2.className = 'output'
+                      output2.style.userSelect = 'text'
+                      output2.style.webkitUserSelect = 'text'
+                      output2.style.mozUserSelect = 'text'
+                      output2.style.msUserSelect = 'text'
                       output2.textContent = 'Adding server: asana...'
                       cliDemo.appendChild(output2)
                       
                       addTimeout(() => {
                         const output3 = document.createElement('div')
                         output3.className = 'success'
+                        output3.style.userSelect = 'text'
+                        output3.style.webkitUserSelect = 'text'
+                        output3.style.mozUserSelect = 'text'
+                        output3.style.msUserSelect = 'text'
                         output3.textContent = "✓ Added server: asana"
                         cliDemo.appendChild(output3)
                         
@@ -1378,11 +1458,19 @@
                           const output4 = document.createElement('div')
                           output4.className = 'output'
                           output4.style.color = '#ffa500'
+                          output4.style.userSelect = 'text'
+                          output4.style.webkitUserSelect = 'text'
+                          output4.style.mozUserSelect = 'text'
+                          output4.style.msUserSelect = 'text'
                           output4.textContent = '⚠ Waiting for authentication...'
                           cliDemo.appendChild(output4)
                           
                           addTimeout(() => {
                             const finalLine = document.createElement('div')
+                            finalLine.style.userSelect = 'text'
+                            finalLine.style.webkitUserSelect = 'text'
+                            finalLine.style.mozUserSelect = 'text'
+                            finalLine.style.msUserSelect = 'text'
                             finalLine.innerHTML = '<span class="prompt">$ </span><span class="cursor-blink"></span>'
                             cliDemo.appendChild(finalLine)
                           }, 1500)
@@ -1483,7 +1571,7 @@
           position: relative;
           width: 100%;
           height: 100%;
-          min-height: 400px;
+          min-height: 550px;
         }
         .tui-dialog {
           position: absolute;
@@ -1901,9 +1989,8 @@
     // Install dropdown functionality
     const installCommands = {
       npm: 'npm install -g mcp-server-manager',
-      homebrew: 'brew install mcp-server-manager',
-      bash: 'curl -fsSL https://mcpsm.dev/install.sh | bash',
-      powershell: 'irm https://mcpsm.dev/install.ps1 | iex'
+      bash: 'curl -fsSL https://raw.githubusercontent.com/MateusTorquato/mcp-server-manager/main/scripts/install.sh | bash',
+      powershell: 'irm https://raw.githubusercontent.com/MateusTorquato/mcp-server-manager/main/scripts/install.ps1 | iex'
     }
 
     function copyInstallCommand() {
@@ -1973,9 +2060,26 @@
         })
       })
       
-      // Start CLI animation on page load (CLI tab is active by default)
-      if (cliDemo) {
-        animateCLI()
+      // Start CLI animation when section becomes visible
+      const terminalSection = document.getElementById('terminal-section')
+      if (terminalSection && cliDemo) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Section is visible, start animation
+              if (cliDemo && !cliDemo.hasAttribute('data-animation-started')) {
+                cliDemo.setAttribute('data-animation-started', 'true')
+                animateCLI()
+              }
+              // Stop observing once animation has started
+              observer.unobserve(entry.target)
+            }
+          })
+        }, {
+          threshold: 0.2 // Start when 20% of the section is visible
+        })
+        
+        observer.observe(terminalSection)
       }
     })
   </script>

@@ -4,7 +4,7 @@ export default defineConfig({
   title: "MCP Server Manager",
   description:
     "The all-in-one CLI tool to manage your MCP servers across all clients",
-  base: "/mcp-server-manager/docs/",
+  base: "/mcp-server-manager/",
   ignoreDeadLinks: true,
 
   head: [
@@ -15,64 +15,64 @@ export default defineConfig({
   themeConfig: {
     logo: "/logo.svg",
     siteTitle: "MCP Server Manager",
+    appearance: false, // Disable dark/light mode toggle
 
     nav: [
-      { text: "Guide", link: "/guide/getting-started" },
-      { text: "CLI Reference", link: "/cli/servers" },
-      { text: "TUI", link: "/tui/overview" },
+      { text: "Guide", link: "/docs/guide/getting-started" },
+      { text: "CLI Reference", link: "/docs/cli/servers" },
+      { text: "TUI", link: "/docs/tui/overview" },
       {
         text: "Links",
         items: [
           { text: "GitHub", link: "https://github.com/MateusTorquato/mcp-server-manager" },
-          { text: "npm", link: "https://www.npmjs.com/package/mcp-server-manager" },
-          { text: "Home", link: "https://mateustorquato.github.io/mcp-server-manager/" },
+          { text: "NPM", link: "https://www.npmjs.com/package/mcp-server-manager" },
         ],
       },
     ],
 
     sidebar: {
-      "/guide/": [
+      "/docs/guide/": [
         {
           text: "Getting Started",
           items: [
-            { text: "Introduction", link: "/guide/getting-started" },
-            { text: "Installation", link: "/guide/installation" },
-            { text: "Quick Start", link: "/guide/quickstart" },
-            { text: "Configuration", link: "/guide/configuration" },
+            { text: "Introduction", link: "/docs/guide/getting-started" },
+            { text: "Installation", link: "/docs/guide/installation" },
+            { text: "Quick Start", link: "/docs/guide/quickstart" },
+            { text: "Configuration", link: "/docs/guide/configuration" },
           ],
         },
         {
           text: "Guides",
           items: [
-            { text: "Advanced Examples", link: "/guide/advanced-examples" },
-            { text: "Migration", link: "/guide/migration" },
-            { text: "Troubleshooting", link: "/guide/troubleshooting" },
+            { text: "Advanced Examples", link: "/docs/guide/advanced-examples" },
+            { text: "Migration", link: "/docs/guide/migration" },
+            { text: "Troubleshooting", link: "/docs/guide/troubleshooting" },
           ],
         },
       ],
-      "/cli/": [
+      "/docs/cli/": [
         {
           text: "CLI Commands",
           items: [
-            { text: "Server Management", link: "/cli/servers" },
-            { text: "Client Sync", link: "/cli/clients" },
-            { text: "Tools", link: "/cli/tools" },
-            { text: "Profiles", link: "/cli/profiles" },
-            { text: "Import & Export", link: "/cli/import-export" },
-            { text: "Daemon", link: "/cli/daemon" },
-            { text: "Authentication", link: "/cli/auth" },
-            { text: "Settings", link: "/cli/settings" },
-            { text: "Utilities", link: "/cli/utilities" },
+            { text: "Server Management", link: "/docs/cli/servers" },
+            { text: "Client Sync", link: "/docs/cli/clients" },
+            { text: "Tools", link: "/docs/cli/tools" },
+            { text: "Profiles", link: "/docs/cli/profiles" },
+            { text: "Import & Export", link: "/docs/cli/import-export" },
+            { text: "Daemon", link: "/docs/cli/daemon" },
+            { text: "Authentication", link: "/docs/cli/auth" },
+            { text: "Settings", link: "/docs/cli/settings" },
+            { text: "Utilities", link: "/docs/cli/utilities" },
           ],
         },
       ],
-      "/tui/": [
+      "/docs/tui/": [
         {
           text: "Interactive TUI",
           items: [
-            { text: "Overview", link: "/tui/overview" },
-            { text: "Keyboard Shortcuts", link: "/tui/shortcuts" },
-            { text: "Screens", link: "/tui/screens" },
+            { text: "Overview", link: "/docs/tui/overview" },
+            { text: "Keyboard Shortcuts", link: "/docs/tui/shortcuts" },
+            { text: "Screens", link: "/docs/tui/screens" },
           ],
         },
       ],
