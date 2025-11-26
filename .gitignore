@@ -24,5 +24,8 @@ coverage/
 # Build output
 dist/
 
+# VitePress cache
+docs/.vitepress/cache/
+
 # TODO file for tracking planned features
 TODO.md
