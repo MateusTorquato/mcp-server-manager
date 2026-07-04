@@ -46,6 +46,15 @@ mcpsm add stripe \
   --token "sk_live_..."
 ```
 
+### Xquik Remote MCP with Bearer Token
+
+```bash
+mcpsm add xquik \
+  --type http \
+  --url "https://xquik.com/mcp" \
+  --token "<XQUIK_API_KEY>"
+```
+
 ### SSE Server with OAuth
 
 ```bash
